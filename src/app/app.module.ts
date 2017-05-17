@@ -5,11 +5,13 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { ShopHeaderComponent } from './shop-header/shop-header.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ShopHeaderComponent
+    ShopHeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
