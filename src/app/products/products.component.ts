@@ -12,7 +12,7 @@ import { Product } from '../product';
       <img [src]="product.imageUrl">
       <p>{{product.description}}</p>
     </section>
-    <footer>Price: {{product.price }}</footer>
+    <footer>Price: {{product.price | goldCoins}}</footer>
     <button (click)="buy(product)">Buy</button>
   </div>
   `,
