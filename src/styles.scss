@@ -13,3 +13,14 @@ html, body{
 *{
     box-sizing: border-box;
 }
+
+button {
+    background: white;
+    padding: 12px;
+    border: 1px solid grey;
+    font-size: 12px;
+
+    &:hover, &:focus {
+        background: lightgrey;
+    }
+}

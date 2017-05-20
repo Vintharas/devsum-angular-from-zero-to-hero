@@ -13,6 +13,7 @@ import { Product } from '../product';
       <p>{{product.description}}</p>
     </section>
     <footer>Price: {{product.price }}</footer>
+    <button (click)="buy(product)">Buy</button>
   </div>
   `,
   styleUrls: ['./products.component.scss']
@@ -30,6 +31,10 @@ export class ProductsComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  }
+
+  buy(product: Product) {
+    alert(`You bought ${product.name}!!! Congrats!`);
   }
 
 }
