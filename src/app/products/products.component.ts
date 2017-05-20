@@ -4,17 +4,10 @@ import { Product } from '../product';
 @Component({
   selector: 'shop-products',
   template: `
-  <div class="item" *ngFor="let product of products">
-    <header>
-      <h2>{{product.name}}</h2>
-    </header>
-    <section class="item__description">
-      <img [src]="product.imageUrl">
-      <p>{{product.description}}</p>
-    </section>
-    <footer>Price: {{product.price | goldCoins}}</footer>
-    <button (click)="buy(product)">Buy</button>
-  </div>
+  <shop-product 
+      [product]="product" 
+      *ngFor="let product of products">
+  </shop-product>
   `,
   styleUrls: ['./products.component.scss']
 })
@@ -33,8 +26,5 @@ export class ProductsComponent implements OnInit {
   ngOnInit() {
   }
 
-  buy(product: Product) {
-    alert(`You bought ${product.name}!!! Congrats!`);
-  }
 
 }

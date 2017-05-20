@@ -1,0 +1,9 @@
+<header>
+  <h2>{{product.name}}</h2>
+</header>
+<section>
+  <img [src]="product.imageUrl">
+  <p>{{product.description}}</p>
+</section>
+<footer>Price: {{product.price | goldCoins}}</footer>
+<button (click)="buy(product)">Buy</button>

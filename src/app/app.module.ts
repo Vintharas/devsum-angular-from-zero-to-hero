@@ -8,6 +8,7 @@ import { ShopHeaderComponent } from './shop-header/shop-header.component';
 import { FooterComponent } from './footer/footer.component';
 import { ProductsComponent } from './products/products.component';
 import { GoldCoinsPipe } from './gold-coins.pipe';
+import { ProductComponent } from './product/product.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { GoldCoinsPipe } from './gold-coins.pipe';
     ShopHeaderComponent,
     FooterComponent,
     ProductsComponent,
-    GoldCoinsPipe
+    GoldCoinsPipe,
+    ProductComponent
   ],
   imports: [
     BrowserModule,
