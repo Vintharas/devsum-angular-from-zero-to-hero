@@ -5,3 +5,11 @@ html, body {
     margin: 0;
     font-family: Helvetica, sans-serif
 }
+
+html, body{
+    height: 100%;
+}
+
+*{
+    box-sizing: border-box;
+}

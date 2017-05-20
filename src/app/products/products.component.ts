@@ -4,18 +4,16 @@ import { Product } from '../product';
 @Component({
   selector: 'shop-products',
   template: `
-<section>
   <div class="item" *ngFor="let product of products">
     <header>
-      <h4>{{product.name}}</h4>
+      <h2>{{product.name}}</h2>
     </header>
-    <section>
+    <section class="item__description">
       <img [src]="product.imageUrl">
       <p>{{product.description}}</p>
     </section>
     <footer>Price: {{product.price }}</footer>
   </div>
-</section>
   `,
   styleUrls: ['./products.component.scss']
 })

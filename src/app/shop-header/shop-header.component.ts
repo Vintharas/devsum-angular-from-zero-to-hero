@@ -9,7 +9,7 @@ import { Component } from "@angular/core";
     </header>
     `,
     styles: [
-        "header{ padding:12px; background:lightgrey; }"
+        ":host{ padding:12px; background:lightgrey;}"
     ]
 })
 export class ShopHeaderComponent {
