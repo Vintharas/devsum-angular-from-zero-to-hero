@@ -9,6 +9,7 @@ import { FooterComponent } from './footer/footer.component';
 import { ProductsComponent } from './products/products.component';
 import { GoldCoinsPipe } from './gold-coins.pipe';
 import { ProductComponent } from './product/product.component';
+import { ProductsService } from './products.service';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,7 @@ import { ProductComponent } from './product/product.component';
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [ProductsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
