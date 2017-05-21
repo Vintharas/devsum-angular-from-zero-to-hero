@@ -1,4 +1,21 @@
-<p>
-  {{product?.name}}
-</p>
-<button (click)="goBack()">Go back</button>
+<section *ngIf="product">
+  <h1>{{product.name}}</h1>
+  <img [src]="product.imageUrl">
+  <p>{{product.description}}</p>
+  <p><strong>Price: </strong> {{product.price | goldCoins}}</p>
+  <section>
+    <h2>Specifications</h2>
+    <ul>
+      <li *ngFor="let spec of product.specs">{{spec.name}}: {{spec.value}}</li>
+    </ul>
+  </section>
+  <section>
+   <h2>Review</h2>
+   <div *ngFor="let review of product.reviews">
+     <h2>{{review.title}} <small> - {{review.author}}</small></h2>
+     <p>{{review.content}}</p>
+     <p><strong>Rating: {{review.rating}}</strong></p>
+   </div>
+  </section>
+  <button (click)="goBack()">Back</button>
+</section>

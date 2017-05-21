@@ -28,6 +28,7 @@ export class ProductDetailsComponent implements OnInit {
 
   goBack() {
     this.router.navigate(['']);
+    //history.back();
   }
 
 }

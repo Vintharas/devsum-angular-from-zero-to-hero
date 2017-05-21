@@ -1,17 +1,12 @@
 :host{
     min-height: 100%;
 
-    :first-child{
+    :first-child {
         display: block;
         height: 12%;
     }
 
-    :nth-child(2){
-        min-height: 83%;
-        padding: 12px;
-    }
-
-    :last-child{
+    :last-child {
         display: block;
         height: 5%;
     }
