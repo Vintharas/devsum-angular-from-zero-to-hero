@@ -7,3 +7,4 @@
 </section>
 <footer>Price: {{product.price | goldCoins}}</footer>
 <button (click)="buy(product)">Buy</button>
+<button [routerLink]="[product.id]">Details</button>

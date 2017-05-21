@@ -37,6 +37,13 @@ export class ProductsService {
                .catch(this.handleError);
   }
 
+  getAsync(id: number): Observable<Product> {
+    return this.http
+               .get(`${this.productsUrl}/${id}`)
+              .map(r => r.json())
+              .catch(this.handleError);
+  }
+
   handleError(r: Response) : Observable<string> {
     console.error(`Error: ${r.status} ${r.statusText} on ${r.url}`, r);
     // return application level error

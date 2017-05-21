@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { ShopHeaderComponent } from './shop-header/shop-header.component';
@@ -10,6 +11,7 @@ import { ProductsComponent } from './products/products.component';
 import { GoldCoinsPipe } from './gold-coins.pipe';
 import { ProductComponent } from './product/product.component';
 import { ProductsService } from './products.service';
+import { ProductDetailsComponent } from './product-details/product-details.component';
 
 @NgModule({
   declarations: [
@@ -18,12 +20,14 @@ import { ProductsService } from './products.service';
     FooterComponent,
     ProductsComponent,
     GoldCoinsPipe,
-    ProductComponent
+    ProductComponent,
+    ProductDetailsComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    AppRoutingModule
   ],
   providers: [ProductsService],
   bootstrap: [AppComponent]
