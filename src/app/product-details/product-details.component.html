@@ -11,10 +11,14 @@
   </section>
   <section>
    <h2>Review</h2>
+  <section>
+    <button *ngIf="!addingAReview" (click)="addReview()">add Review</button>
+    <shop-add-review-form *ngIf="addingAReview"
+                          (onNewReview)="addReviewToProduct($event)"
+    ></shop-add-review-form>
+  </section>
    <div *ngFor="let review of product.reviews">
-     <h2>{{review.title}} <small> - {{review.author}}</small></h2>
-     <p>{{review.content}}</p>
-     <p><strong>Rating: {{review.rating}}</strong></p>
+     <shop-review [review]="review"></shop-review>
    </div>
   </section>
   <button (click)="goBack()">Back</button>

@@ -1,3 +1,5 @@
+import { Review } from "./review";
+
 export interface Product {
     name: string;
     description: string;
@@ -11,11 +13,4 @@ export interface Product {
 export interface Specification {
     name: string;
     value: string;
-}
-
-export interface Review {
-    title: string;
-    content: string;
-    author: string;
-    rating: number;
 }

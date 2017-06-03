@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
 import { Product } from "../product";
+import { Review } from "../review";
 import { ProductsService } from "app/products.service";
 
 import { Observable } from 'rxjs/Observable';
@@ -14,6 +15,7 @@ import 'rxjs/add/operator/mergemap';
 })
 export class ProductDetailsComponent implements OnInit {
   product: Product;
+  addingAReview = false;
 
   constructor(private productsService: ProductsService,
               private activatedRoute: ActivatedRoute,
@@ -29,6 +31,17 @@ export class ProductDetailsComponent implements OnInit {
   goBack() {
     this.router.navigate(['']);
     //history.back();
+  }
+
+  addReview() {
+    this.addingAReview = true;
+  }
+
+  addReviewToProduct(review: Review) {
+    this.product.reviews.unshift(review);
+    // save it in the db via service
+    console.log(`yippi! new review added ${JSON.stringify(review)}`);
+    this.addingAReview = false;
   }
 
 }

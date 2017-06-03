@@ -12,6 +12,8 @@ import { GoldCoinsPipe } from './gold-coins.pipe';
 import { ProductComponent } from './product/product.component';
 import { ProductsService } from './products.service';
 import { ProductDetailsComponent } from './product-details/product-details.component';
+import { AddReviewFormComponent } from './add-review-form/add-review-form.component';
+import { ReviewComponent } from './review/review.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
     ProductsComponent,
     GoldCoinsPipe,
     ProductComponent,
-    ProductDetailsComponent
+    ProductDetailsComponent,
+    AddReviewFormComponent,
+    ReviewComponent
   ],
   imports: [
     BrowserModule,

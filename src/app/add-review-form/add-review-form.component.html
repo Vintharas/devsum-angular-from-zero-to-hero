@@ -1,0 +1,34 @@
+<form (submit)="addNewReview()">
+
+  <section>
+    <label for="title">Title:</label>
+    <input type="text" id="title" name="title" [(ngModel)]="newReview.title" autofocus>
+    <p></p>
+  </section>
+
+  <section>
+    <label for="content">Content:</label>
+    <textarea type="text" id="content" name="content" [(ngModel)]="newReview.content"></textarea>
+    <p></p>
+  </section>
+
+  <section>
+    <label for="rating">Rating:</label>
+    <input type="number" id="rating" name="rating" [(ngModel)]="newReview.rating" min="0" max="5">
+    <p></p>
+  </section>
+
+  <section>
+    <label for="author">Author:</label>
+    <input type="text" id="author" name="author" [(ngModel)]="newReview.author" disabled>
+    <p></p>
+  </section>
+
+  <button type="submit">Add Review</button>
+
+</form>
+
+<section>
+  <h1>Preview Review</h1>
+  <shop-review [review]="newReview"></shop-review>
+</section>
