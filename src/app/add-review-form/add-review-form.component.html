@@ -1,21 +1,33 @@
-<form (submit)="addNewReview()">
+<form (submit)="addNewReview()" #form="ngForm">
 
   <section>
     <label for="title">Title:</label>
-    <input type="text" id="title" name="title" [(ngModel)]="newReview.title" autofocus>
-    <p></p>
+    <input type="text" id="title" name="title" [(ngModel)]="newReview.title" 
+           #titleEl #title="ngModel" required>
+    <!-- cool for debugging 
+    <p>Classes: {{titleEl.className}}</p>
+    -->
+    <p [hidden]="title.valid || title.pristine" class="error">
+      Please Good Sir/Madam set a title
+    </p>
   </section>
 
   <section>
     <label for="content">Content:</label>
-    <textarea type="text" id="content" name="content" [(ngModel)]="newReview.content"></textarea>
-    <p></p>
+    <textarea type="text" id="content" name="content" [(ngModel)]="newReview.content"
+          #content="ngModel" required></textarea>
+    <p [hidden]="content.valid || content.pristine" class="error">
+      Please set some content for your magical review
+    </p>
   </section>
 
   <section>
     <label for="rating">Rating:</label>
-    <input type="number" id="rating" name="rating" [(ngModel)]="newReview.rating" min="0" max="5">
-    <p></p>
+    <input type="number" id="rating" name="rating" [(ngModel)]="newReview.rating" min="0" max="5" 
+           #rating="ngModel" required>
+    <p [hidden]="rating.valid || rating.pristine" class="error">
+      Please set a rating, the higher the better
+    </p>
   </section>
 
   <section>
@@ -24,7 +36,8 @@
     <p></p>
   </section>
 
-  <button type="submit">Add Review</button>
+  <button type="submit"
+    [disabled]="!form.valid">Add Review</button>
 
 </form>
 
