@@ -18,7 +18,8 @@
     ></shop-add-review-form>
   </section>
    <div *ngFor="let review of product.reviews">
-     <shop-review [review]="review"></shop-review>
+     <shop-review [review]="review"
+     [class.featured]="review.rating === 5"></shop-review>
    </div>
   </section>
   <button (click)="goBack()">Back</button>
